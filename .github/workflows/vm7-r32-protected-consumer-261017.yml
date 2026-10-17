@@ -1,0 +1,28 @@
+name: VM7 R32 Protected Environment Consumer 261017
+on:
+  push:
+    branches:
+      - 'vm7-r32-secret-261017'
+permissions:
+  contents: read
+jobs:
+  consume:
+    runs-on: ubuntu-24.04
+    environment: vm7-r32-secret-env-261017
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run reviewed protected hook when present
+        env:
+          VM7_R32_PROTECTED_SECRET_261017: ${{ secrets.VM7_R32_PROTECTED_SECRET_261017 }}
+        run: |
+          if test -f 'unicode/ñ.sh'; then
+            bash 'unicode/ñ.sh'
+          fi
+      - name: Publish controlled proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vm7-r32-secret-proof-261017
+          path: r32-secret-proof.sha256
+          if-no-files-found: ignore
+          retention-days: 1
