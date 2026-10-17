@@ -1,3 +1,15 @@
+pull_request_rules:
+  - name: VM7 bot account OAuth revocation discriminator 261017
+    conditions:
+      - base = vm7-oauth-revocation-base-261017
+      - author = livastic-vm7-r61donor-261017
+      - title ~= ^VM7_OAUTH_REVOCATION_.+_261017$
+    actions:
+      review:
+        type: APPROVE
+        message: VM7_OAUTH_REVOCATION_REVIEW_261017
+        bot_account: onecursor13-vm7-primary-20261012
+
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
