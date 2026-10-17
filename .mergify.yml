@@ -1,13 +1,3 @@
-pull_request_rules:
-  - name: VM7 required deployment injection live 261017g
-    conditions:
-      - base = vm7-required-deployment-261017g
-      - author = livastic-vm7-r61donor-261017
-      - title = VM7_REQUIRED_DEPLOYMENT_INJECTION_261017g
-    actions:
-      merge:
-        method: merge
-
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
