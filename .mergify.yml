@@ -1,0 +1,10 @@
+# VM7 cache-higher-strict-261017
+merge_protections:
+  - name: VM7 cache priority requires Owner approval 261017
+    if:
+      - base = main
+    success_conditions:
+      - approved-reviews-by = onecursor13-vm7-secondary-20261013
+
+merge_protections_settings:
+  reporting_method: check-runs
