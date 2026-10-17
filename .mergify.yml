@@ -1,13 +1,3 @@
-pull_request_rules:
-  - name: VM7 base branch rename final writer 261017
-    conditions:
-      - base = vm7-base-rename-new-final-261017
-      - title = VM7_BASE_BRANCH_RENAME_FINAL_261017
-      - author = livastic-vm7-r61donor-261017
-    actions:
-      merge:
-        method: merge
-
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
