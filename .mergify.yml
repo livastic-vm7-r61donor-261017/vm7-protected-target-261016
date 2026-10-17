@@ -1,14 +1,3 @@
-pull_request_rules:
-  - name: VM7 classic source Admin-bot chain 261017
-    conditions:
-      - base = vm7-classic-admin-bot-261017
-      - author = onecursor13-vm7-primary-20261012
-      - title = VM7_CLASSIC_ADMIN_BOT_DISCOVERY_261017
-    actions:
-      merge:
-        method: merge
-        merge_bot_account: onecursor13-vm7-secondary-20261013
-
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
