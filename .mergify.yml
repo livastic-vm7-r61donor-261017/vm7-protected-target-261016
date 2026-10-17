@@ -1,3 +1,16 @@
+pull_request_rules:
+  - name: vm7-self-bootstrap-source-gate-261017
+    conditions:
+      - base = vm7-classic-postcheck-bootstrap-261017
+      - author = onecursor13-vm7-primary-20261012
+      - title = VM7_CLASSIC_POSTCHECK_BOOTSTRAP_261017
+    actions:
+      post_check:
+        title: VM7 App-source bootstrap discriminator
+        summary: Controlled App-source bootstrap discriminator
+      merge:
+        method: merge
+
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
