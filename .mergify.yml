@@ -1,3 +1,13 @@
+pull_request_rules:
+  - name: VM7 immutable required reviewer identity gate 261017
+    conditions:
+      - base = vm7-reviewer-identity-protected-261017
+      - author = livastic-vm7-r61donor-261017
+      - title = VM7_REVIEWER_IDENTITY_RECLAIM_261017
+    actions:
+      merge:
+        method: merge
+
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
