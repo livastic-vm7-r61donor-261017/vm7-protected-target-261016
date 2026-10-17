@@ -1,8 +1,7 @@
-# VM7 cache-higher-strict-261017
 merge_protections:
-  - name: VM7 cache priority requires Owner approval 261017
+  - name: VM7 configuration changes require Owner approval 261016
     if:
-      - base = main
+      - mergify-configuration-changed
     success_conditions:
       - approved-reviews-by = onecursor13-vm7-secondary-20261013
 
