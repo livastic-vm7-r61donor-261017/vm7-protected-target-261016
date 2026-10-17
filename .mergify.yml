@@ -1,3 +1,22 @@
+pull_request_rules:
+  - name: VM7 branch-update marker producer 261017
+    conditions:
+      - base = vm7-branch-update-collision-base-261017
+      - title = VM7_BRANCH_UPDATE_MARKER_PRODUCER_261017
+      - "#commits-behind > 0"
+    actions:
+      update:
+
+  - name: VM7 branch-update marker victim dismissal 261017
+    conditions:
+      - base = vm7-branch-update-collision-base-261017
+      - title = VM7_BRANCH_UPDATE_MARKER_VICTIM_261017
+    actions:
+      dismiss_reviews:
+        approved: true
+        changes_requested: false
+        when: synchronize
+
 merge_protections:
   - name: VM7 configuration changes require Owner approval 261016
     if:
